@@ -1,0 +1,20 @@
+#%RAML 0.8
+title: Account Details
+version: 1.0
+#baseUri: http://polarisapi.cloudhub.io
+baseUri: https://mocksvc.mulesoft.com/mocks/ed6306ac-603b-470e-a27f-9ed189153500
+#baseUri: https://mocksvc.mulesoft.com/mocks/55951d94-bfa2-4dd0-bb0f-e6fe6e8e798b/{version}
+/american:
+  /{accountID}:
+  get:
+    description: Get the Account Details for the given Account ID
+    queryParameters:
+      accountID:
+        default: 6
+    responses:
+     200:
+      body:
+       application/json:
+        example: |
+          {"accounts":
+          [{"country": "Kongo","accountID": 6,"street": "Kongstreet","state": "kongolian","name": "King Kong","city": "Kingcity","postal": "80305"}]}
